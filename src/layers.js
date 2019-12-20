@@ -919,6 +919,72 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     )
                 },
                 {
+                    title: 'Pitäjänkartta 200m',
+                    description: '<a href="http://www.karjalankartat.fi/">http://www.karjalankartat.fi/</a>',
+                    isDefault: true,
+                    layer: L.tileLayer.wms(
+                        `https://mapservices.navici.com/karjalankartat/wms?apikey=${config.karjalankarttaKey}`,
+                        {
+                            code: 'Pkk20',
+                            isOverlay: true,
+                            isOverlayTransparent: false,
+                            layers: 'pitaja20k_group',
+                            crs: L.CRS.EPSG3857,
+                            print: true,
+                            jnx: true,
+                            scaleDependent: true,
+                            noCors: true,
+                            shortName: 'kk_pitaja20k',
+                            bound: [[59.86137, 28.20190], [62.34706, 33.08533]],
+                            attribution: '<a href="https://www.karjalankartat.fi/">karjalankartat.fi</a>',
+                        }
+                    )
+                },
+                {
+                    title: 'Karjalankartta 200m',
+                    description: '<a href="http://www.karjalankartat.fi/">http://www.karjalankartat.fi/</a>',
+                    isDefault: true,
+                    layer: L.tileLayer.wms(
+                        `https://mapservices.navici.com/karjalankartat/wms?apikey=${config.karjalankarttaKey}`,
+                        {
+                            code: 'Fkk20',
+                            isOverlay: true,
+                            isOverlayTransparent: false,
+                            layers: 'topo20k_group',
+                            crs: L.CRS.EPSG3857,
+                            print: true,
+                            jnx: true,
+                            scaleDependent: true,
+                            noCors: true,
+                            shortName: 'kk_topo20k',
+                            bound: [[59.86137, 28.20190], [62.34706, 33.08533]],
+                            attribution: '<a href="https://www.karjalankartat.fi/">karjalankartat.fi</a>',
+                        }
+                    )
+                },
+                {
+                    title: 'Karjalankartta 1km',
+                    description: '<a href="http://www.karjalankartat.fi/">http://www.karjalankartat.fi/</a>',
+                    isDefault: true,
+                    layer: L.tileLayer.wms(
+                        `https://mapservices.navici.com/karjalankartat/wms?apikey=${config.karjalankarttaKey}`,
+                        {
+                            code: 'Fkk100',
+                            isOverlay: true,
+                            isOverlayTransparent: false,
+                            layers: 'topo100k_group',
+                            crs: L.CRS.EPSG3857,
+                            print: true,
+                            jnx: true,
+                            scaleDependent: true,
+                            noCors: true,
+                            shortName: 'kk_topo100k',
+                            bound: [[59.80616, 28.30078], [63.56078, 33.57971]],
+                            attribution: '<a href="https://www.karjalankartat.fi/">karjalankartat.fi</a>',
+                        }
+                    )
+                },
+                {
                     title: 'Great Britain Topo (out of order)',
                     disabled: true,
                     isDefault: false,
@@ -1207,6 +1273,9 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'Montenegro topo 250m',
                 'Finland Topo',
                 'Sweden topo',
+                'Pitäjänkartta 200m',
+                'Karjalankartta 200m',
+                'Karjalankartta 1km',
                 'Great Britain Topo (out of order)',
                 'Slovakia topo',
                 'Spain topo',
@@ -1282,6 +1351,9 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'Norway topo',
         'Finland Topo',
         'Sweden topo',
+        'Pitäjänkartta 200m',
+        'Karjalankartta 200m',
+        'Karjalankartta 1km',
         'Slovakia topo',
         'Spain topo',
         'Mountains by Alexander Purikov',
