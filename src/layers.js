@@ -944,6 +944,46 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     )
                 },
                 {
+                    title: 'Karjalankartta 200m',
+                    description: '<a href="http://www.karjalankartat.fi/">http://www.karjalankartat.fi/</a>',
+                    isDefault: true,
+                    layer: L.tileLayer.wms(
+                        `https://mapservices.navici.com/karjalankartat/wms?apikey=${config.karjalankarttaKey}`,
+                        {
+                            code: 'Fkk20',
+                            isOverlay: false,
+                            layers: 'topo20k_group',
+                            crs: L.CRS.EPSG3857,
+                            print: true,
+                            jnx: true,
+                            scaleDependent: true,
+                            noCors: true,
+                            shortName: 'kk_topo20k',
+                            attribution: '<a href="https://www.karjalankartat.fi/">karjalankartat.fi</a>',
+                        }
+                    )
+                },
+                {
+                    title: 'Karjalankartta 1km',
+                    description: '<a href="http://www.karjalankartat.fi/">http://www.karjalankartat.fi/</a>',
+                    isDefault: true,
+                    layer: L.tileLayer.wms(
+                        `https://mapservices.navici.com/karjalankartat/wms?apikey=${config.karjalankarttaKey}`,
+                        {
+                            code: 'Fkk100',
+                            isOverlay: false,
+                            layers: 'topo100k_group',
+                            crs: L.CRS.EPSG3857,
+                            print: true,
+                            jnx: true,
+                            scaleDependent: true,
+                            noCors: true,
+                            shortName: 'kk_topo100k',
+                            attribution: '<a href="https://www.karjalankartat.fi/">karjalankartat.fi</a>',
+                        }
+                    )
+                },
+                {
                     title: 'France Topo 250m',
                     isDefault: false,
                     layer: new LayerGroupWithOptions(
@@ -1205,6 +1245,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'Topo 250m',
                 'Montenegro topo 250m',
                 'Finland Topo',
+                'Karjalankartta 200m',
+                'Karjalankartta 1km',
                 'France Topo 250m',
                 'Great Britain Topo',
                 'Slovakia topo',
@@ -1307,6 +1349,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'Slazav Moscow region map',
         'Races',
         'O-sport',
+        'Karjalankartta 200m',
+        'Karjalankartta 1km',
         '#custom-top',
 
         // line overlays
