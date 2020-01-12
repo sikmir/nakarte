@@ -478,8 +478,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     isDefault: false,
                     layer: new RetinaTileLayer(
                         [
-                            'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png',
-                            'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}@2x.png',
+                            `https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=${config.thunderforestKey}`, // eslint-disable-line max-len
+                            `https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}@2x.png?apikey=${config.thunderforestKey}`, // eslint-disable-line max-len
                         ],
                         {
                             code: 'Ocm',
@@ -497,8 +497,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     isDefault: false,
                     layer: new RetinaTileLayer(
                         [
-                            'https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png',
-                            'https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}@2x.png',
+                            `https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=${config.thunderforestKey}`, // eslint-disable-line max-len
+                            `https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}@2x.png?apikey=${config.thunderforestKey}`, // eslint-disable-line max-len
                         ],
                         {
                             code: 'Oso',
