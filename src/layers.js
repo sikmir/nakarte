@@ -476,7 +476,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     title: 'OpenCycleMap',
                     description: '<a href="https://www.opencyclemap.org/docs/">(Info and key)</a>',
                     isDefault: true,
-                    layer: L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png',
+                    layer: L.tileLayer(
+                        `https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=${config.thunderforestKey}`,
                         {
                             code: 'Ocm',
                             isOverlay: false,
@@ -491,7 +492,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 {
                     title: 'OSM Outdoors',
                     isDefault: true,
-                    layer: L.tileLayer('https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png',
+                    layer: L.tileLayer(
+                        `https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=${config.thunderforestKey}`,
                         {
                             code: 'Oso',
                             isOverlay: false,
