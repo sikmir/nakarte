@@ -473,6 +473,22 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     )
                 },
                 {
+                    title: 'OpenRailwayMap',
+                    isDefault: true,
+                    layer: L.tileLayer('http://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
+                        {
+                            code: 'Orm',
+                            isOverlay: true,
+                            isOverlayTransparent: true,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: false,
+                            shortName: 'orm',
+                            attribution: '<a href="https://www.openrailwaymap.org/">OpenRailwayMap</a>',
+                        }
+                    )
+                },
+                {
                     title: 'OpenCycleMap',
                     description: '<a href="https://www.opencyclemap.org/docs/">(Info and key)</a>',
                     isDefault: true,
@@ -1263,8 +1279,9 @@ class LayerGroupWithOptions extends L.LayerGroup {
             layers: [
                 'Google Hybrid',
                 'Bing imagery acquisition dates',
-                'geocaching.su'
-            ]
+                'geocaching.su',
+                'OpenRailwayMap',
+            ],
         },
         {
             title: 'Routes and traces',
@@ -1370,6 +1387,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'Yandex tracks (zoom ≥ 10)',
         'Soviet topo maps grid',
         'Wikimapia',
+        'OpenRailwayMap',
 
         // point overlays
         'Mountain passes (Westra)',
