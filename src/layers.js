@@ -77,7 +77,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'Yandex map',
-                    isDefault: true,
+                    isDefault: false,
                     layer: new L.Layer.Yandex.Map(
                         {
                             scaleDependent: true,
@@ -139,7 +139,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'Google Satellite',
-                    isDefault: true,
+                    isDefault: false,
                     layer: new L.Layer.GoogleSat(
                         {
                             code: 'L',
@@ -155,7 +155,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'Google Terrain',
-                    isDefault: true,
+                    isDefault: false,
                     layer: new L.Layer.GoogleTerrain({
                             code: 'P',
                             isOverlay: false,
@@ -206,7 +206,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
 
                 {
                     title: 'Topo 10km',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer("https://{s}.tiles.nakarte.me/topo001m/{z}/{x}/{y}",
                         {
                             code: 'D',
@@ -223,7 +223,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'GGC 2 km',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer("https://{s}.tiles.nakarte.me/ggc2000/{z}/{x}/{y}",
                         {
                             code: 'N',
@@ -240,7 +240,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'ArbaletMO',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer("https://{s}.tiles.nakarte.me/ArbaletMO/{z}/{x}/{y}",
                         {
                             code: 'A',
@@ -278,7 +278,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'GGC 1km',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer("https://{s}.tiles.nakarte.me/ggc1000/{z}/{x}/{y}",
                         {
                             code: 'J',
@@ -295,7 +295,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'Topo 1km',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer("https://{s}.tiles.nakarte.me/topo1000/{z}/{x}/{y}",
                         {
                             code: 'C',
@@ -329,7 +329,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'Topo 500m',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer("https://{s}.tiles.nakarte.me/topo500/{z}/{x}/{y}",
                         {
                             code: 'B',
@@ -416,7 +416,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'Soviet topo maps grid',
-                    isDefault: true,
+                    isDefault: false,
                     layer: new L.Layer.SovietTopoGrid({
                         code: 'Ng',
                         isOverlay: true,
@@ -457,7 +457,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'OpenTopoMap',
-                    isDefault: false,
+                    isDefault: true,
                     layer: L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
                         {
                             code: 'Otm',
@@ -476,7 +476,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 {
                     title: 'OpenCycleMap',
                     description: '<a href="https://www.opencyclemap.org/docs/">(Info and key)</a>',
-                    isDefault: false,
+                    isDefault: true,
                     layer: new RetinaTileLayer(
                         [
                             'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png',
@@ -495,7 +495,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'OSM Outdoors',
-                    isDefault: false,
+                    isDefault: true,
                     layer: new RetinaTileLayer(
                         [
                             'https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png',
@@ -569,7 +569,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'Topo 250m',
-                    isDefault: false,
+                    isDefault: true,
                     layer: L.tileLayer("https://{s}.tiles.nakarte.me/topo250/{z}/{x}/{y}",
                         {
                             code: 'T25',
@@ -644,7 +644,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'geocaching.su',
-                    isDefault: false,
+                    isDefault: true,
                     layer: new GeocachingSu(config.geocachingSuUrl, {
                         code: 'Gc',
                         isOverlay: true,
@@ -657,7 +657,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'OpenStreetMap GPS traces',
-                    isDefault: false,
+                    isDefault: true,
                     layer: L.tileLayer('https://{s}.gps-tile.openstreetmap.org/lines/{z}/{x}/{y}.png',
                         {
                             code: 'Ot',
@@ -674,7 +674,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 },
                 {
                     title: 'Strava heatmap (all)',
-                    isDefault: false,
+                    isDefault: true,
                     layer: new RetinaTileLayer(
                         [
                             urlViaCorsProxy(
@@ -897,7 +897,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 {
                     title: 'Finland Topo',
                     description: '<a href="https://laji.fi/en/map/">LAJI.FI</a>',
-                    isDefault: false,
+                    isDefault: true,
                     layer: L.tileLayer(
                         "https://proxy.laji.fi/mml_wmts/maasto/wmts/1.0.0/maastokartta/default/WGS84_Pseudo-Mercator/" +
                         "{z}/{y}/{x}.png",
