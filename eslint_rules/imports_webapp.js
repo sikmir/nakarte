@@ -38,6 +38,7 @@ const filesWithSideEffects = [
     'src/lib/leaflet.placemark/index.js',
     'src/lib/leaflet.polyline-edit/index.js',
     'src/lib/leaflet.polyline-measure/index.js',
+    'src/lib/leaflet.layer.mytracks/index.js',
 ];
 
 const filesWithExportAndSideEffects = [
