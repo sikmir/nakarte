@@ -148,4 +148,5 @@ module.exports = [
     'src/secrets.js',
     'src/App.js',
     'src/layers.js',
+    'src/lib/leaflet.layer.mytracks/index.js',
 ];
