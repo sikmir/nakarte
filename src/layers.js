@@ -1221,6 +1221,25 @@ class LayerGroupWithOptions extends L.LayerGroup {
                         }
                     )
                 },
+                {
+                    title: 'Sentinel-2 L1C',
+                    isDefault: true,
+                    layer: L.tileLayer.wms(
+                        'https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?showlogo=false',
+                        {
+                            code: 'Sn',
+                            isOverlay: true,
+                            isOverlayTransparent: false,
+                            layers: '1_TRUE_COLOR',
+                            crs: L.CRS.EPSG3857,
+                            print: true,
+                            jnx: false,
+                            scaleDependent: true,
+                            noCors: true,
+                            shortName: 'sentinel',
+                        }
+                    )
+                },
     ];
 
     const groupsDefs = [
@@ -1293,6 +1312,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'Google Hybrid',
                 'geocaching.su',
                 'OpenRailwayMap',
+                'Sentinel-2 L1C',
             ]
         },
         {
@@ -1378,6 +1398,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'Slazav Moscow region map',
         'Races',
         'O-sport',
+        'Sentinel-2 L1C',
         '#custom-top',
 
         // line overlays
