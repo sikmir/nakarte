@@ -1210,6 +1210,25 @@ class LayerGroupWithOptions extends L.LayerGroup {
                             }, true
                     )
                 },
+                {
+                    title: 'Sentinel-2 L1C',
+                    isDefault: true,
+                    layer: L.tileLayer.wms(
+                        'https://services.sentinel-hub.com/ogc/wms/cd280189-7c51-45a6-ab05-f96a76067710?showlogo=false',
+                        {
+                            code: 'Sn',
+                            isOverlay: true,
+                            layers: '1_TRUE_COLOR',
+                            crs: L.CRS.EPSG3857,
+                            print: true,
+                            jnx: false,
+                            scaleDependent: true,
+                            noCors: true,
+                            shortName: 'sentinel',
+                            isOverlayTransparent: false
+                        }
+                    )
+                },
     ];
 
     const groupsDefs = [
@@ -1277,6 +1296,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'Bing imagery acquisition dates',
                 'geocaching.su',
                 'OpenRailwayMap',
+                'Sentinel-2 L1C',
             ],
         },
         {
@@ -1368,6 +1388,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'O-sport',
         'Karjalankartta 200m',
         'Karjalankartta 1km',
+        'Sentinel-2 L1C',
         '#custom-top',
 
         // line overlays
