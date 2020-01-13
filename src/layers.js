@@ -1249,6 +1249,21 @@ class LayerGroupWithOptions extends L.LayerGroup {
                         }
                     )
                 },
+                {
+                    title: 'My tracks',
+                    isDefault: true,
+                    layer: L.tileLayer('https://tiles.sikmir.ru/services/rtracks/tiles/{z}/{x}/{y}.png',
+                        {
+                            code: 'Myt',
+                            isOverlay: true,
+                            isOverlayTransparent: true,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: false,
+                            shortName: 'my_tracks'
+                        }
+                    )
+                },
     ];
 
     const groupsDefs = [
@@ -1331,6 +1346,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'Strava heatmap (ride)',
                 'Strava heatmap (winter)',
                 'Yandex tracks (zoom ≥ 10)',
+                'My tracks',
             ],
 
         },
@@ -1427,6 +1443,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'Soviet topo maps grid',
         'Wikimapia',
         'OpenRailwayMap',
+        'My tracks',
 
         // point overlays
         'Mountain passes (Westra)',
