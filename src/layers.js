@@ -12,6 +12,7 @@ import {urlViaCorsProxy} from '~/lib/CORSProxy';
 import '~/lib/leaflet.layer.TileLayer.cutline';
 import {getCutline} from '~/lib/layers-cutlines';
 import {LayerCutlineOverview} from '~/lib/leaflet.layer.LayerCutlineOverview';
+import '~/lib/leaflet.layer.mytracks';
 
 class LayerGroupWithOptions extends L.LayerGroup {
     constructor(layers, options) {
@@ -1266,6 +1267,21 @@ class LayerGroupWithOptions extends L.LayerGroup {
                         }
                     )
                 },
+                {
+                    title: 'Tracks by @sikmir (raster)',
+                    isDefault: true,
+                    layer: new L.Layer.MyTracksRaster(
+                        {
+                            code: 'Mytr',
+                            isOverlay: true,
+                            isOverlayTransparent: true,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: false,
+                            shortName: 'my_rtracks'
+                        }
+                    )
+                },
     ];
 
     const groupsDefs = [
@@ -1352,6 +1368,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'Strava heatmap (ride)',
                 'Strava heatmap (winter)',
                 'Extremum tracks',
+                'Tracks by @sikmir (raster)',
             ],
 
         },
@@ -1441,6 +1458,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'Wikimapia',
         'OpenRailwayMap',
         'Extremum tracks',
+        'Tracks by @sikmir (raster)',
 
         // point overlays
         'Mountain passes (Westra)',
