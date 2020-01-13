@@ -1,13 +1,9 @@
 import secrets from './secrets';
 
 const config = {
-    caption: `
-        <a href="https://docs.nakarte.me">Documentation</a> |
-        <a href="https://about.nakarte.me">News</a> |
-        <a href="mailto:nakarte@nakarte.me" target="_self">nakarte@nakarte.me</a> |
-        <a href="https://about.nakarte.me/p/blog-page_29.html">Donate</a>`,
-    defaultLocation: [55.75185, 37.61856],
-    defaultZoom: 10,
+    caption: ``,
+    defaultLocation: [60.0, 30.0],
+    defaultZoom: 7,
     googleApiUrl: `https://maps.googleapis.com/maps/api/js?v=3&key=${secrets.google}`,
     westraDataBaseUrl: 'https://nakarte.me/westraPasses/',
     CORSProxyUrl: 'https://proxy.nakarte.me/',
