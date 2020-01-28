@@ -1,4 +1,4 @@
-import * as Sentry from '@sentry/browser';
+// import * as Sentry from '@sentry/browser';
 
 function randId() {
     return Math.random().toString(36).substring(2, 13);
@@ -9,31 +9,32 @@ const sessionId = randId();
 function captureMessage(msg, extra = {}) {
     extra.url = window.location.toString();
     console.log('captureMessage', msg, extra); // eslint-disable-line no-console
-    Sentry.withScope(function(scope) {
+    /* Sentry.withScope(function(scope) {
         scope.setExtras(extra);
         Sentry.captureMessage(msg);
-    });
+    }); */
 }
 
 function captureException(e, description) {
     console.log('captureException', e, description); // eslint-disable-line no-console
-    Sentry.withScope(function(scope) {
+    /* Sentry.withScope(function(scope) {
         if (description) {
             scope.setTag('description', description);
         }
         scope.setExtra('url', window.location.toString());
         Sentry.captureException(e);
-    });
+    }); */
 }
 function captureBreadcrumb(message, data = {}) {
-    data.url = window.location.toString();
+    console.log(message, data); // eslint-disable-line no-console
+    /* data.url = window.location.toString();
     Sentry.addBreadcrumb({
         message, data
-    });
+    }); */
 }
 
 function logEvent(eventName, extra) {
-    const url = 'https://nakarte.me/event';
+    // const url = 'https://nakarte.me/event';
 
     const data = {event: eventName.toString()};
     data.data = {
@@ -43,7 +44,8 @@ function logEvent(eventName, extra) {
         address: window.location.toString()
     };
     let s = JSON.stringify(data);
-    try {
+    console.log(s); // eslint-disable-line no-console
+    /* try {
         navigator.sendBeacon(url, s);
     } catch (e) {
         data.data.beacon = false;
@@ -51,7 +53,7 @@ function logEvent(eventName, extra) {
         const xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://nakarte.me/event');
         xhr.send(s);
-    }
+    } */
 }
 
 export {captureMessage, captureException, captureBreadcrumb, logEvent, randId};
