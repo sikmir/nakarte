@@ -1233,6 +1233,22 @@ class LayerGroupWithOptions extends L.LayerGroup {
                         }
                     )
                 },
+                {
+                    title: 'CyclOSM',
+                    description: '<a href="https://cyclosm.org">https://cyclosm.org</a>',
+                    isDefault: true,
+                    layer: L.tileLayer(`https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png`,
+                        {
+                            code: 'Cosm',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: true,
+                            shortName: 'cyclosm',
+                            attribution: '<a href="https://www.cyclosm.org/">CyclOSM</a>',
+                        }
+                    )
+                },
     ];
 
     const groupsDefs = [
@@ -1272,7 +1288,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
             layers: [
                 'OpenTopoMap',
                 'OpenCycleMap',
-                'OSM Outdoors'
+                'OSM Outdoors',
+                'CyclOSM'
             ],
         },
         {
@@ -1344,6 +1361,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'OpenCycleMap',
         'OSM Outdoors',
         'mapy.cz tourist',
+        'CyclOSM',
         // Satellite
         'ESRI Satellite',
         'Yandex Satellite',
