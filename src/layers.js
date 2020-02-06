@@ -870,70 +870,6 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     )
                 },
                 {
-                    title: 'Czech base',
-                    isDefault: false,
-                    layer: new RetinaTileLayer(
-                        [
-                            'https://m{s}.mapserver.mapy.cz/base-m/{z}-{x}-{y}',
-                            'https://m{s}.mapserver.mapy.cz/base-m/retina/{z}-{x}-{y}'
-                        ],
-                        {
-                            code: 'Czb',
-                            isOverlay: false,
-                            tms: false,
-                            print: true,
-                            jnx: true,
-                            subdomains: '1234',
-                            scaleDependent: true,
-                            shortName: 'czech',
-                            attribution: '<a href="https://mapy.cz/zakladni">mapy.cz base map</a>',
-                        }
-                    )
-                },
-                {
-                    title: 'mapy.cz tourist',
-                    isDefault: true,
-                    layer: new RetinaTileLayer(
-                        [
-                            'https://m{s}.mapserver.mapy.cz/turist-m/{z}-{x}-{y}',
-                            'https://m{s}.mapserver.mapy.cz/turist-m/retina/{z}-{x}-{y}',
-                        ],
-                        {
-                            code: 'Czt',
-                            isOverlay: false,
-                            tms: false,
-                            print: true,
-                            jnx: true,
-                            subdomains: '1234',
-                            scaleDependent: true,
-                            shortName: 'czech_tourist',
-                            hotkey: 'H',
-                            attribution: '<a href="https://mapy.cz/turisticka">mapy.cz outdoor map</a>',
-                        }
-                    )
-                },
-                {
-                    title: 'Czech winter',
-                    isDefault: false,
-                    layer: new RetinaTileLayer(
-                        [
-                            'https://m{s}.mapserver.mapy.cz/winter-m/{z}-{x}-{y}',
-                            'https://m{s}.mapserver.mapy.cz/winter-m/retina/{z}-{x}-{y}',
-                        ],
-                        {
-                            code: 'Czw',
-                            isOverlay: false,
-                            tms: false,
-                            print: true,
-                            jnx: true,
-                            subdomains: '1234',
-                            scaleDependent: true,
-                            shortName: 'czech_winter',
-                            attribution: '<a href="https://mapy.cz/zimni">mapy.cz winter map</a>',
-                        }
-                    )
-                },
-                {
                     title: 'Finland Topo',
                     description: '<a href="https://www.retkikartta.fi/?lang=en">https://www.retkikartta.fi/</a>',
                     isDefault: true,
@@ -1355,14 +1291,6 @@ class LayerGroupWithOptions extends L.LayerGroup {
             ],
 
         },
-        {
-            title: 'Czech <a href="https://mapy.cz">https://mapy.cz</a>',
-            layers: [
-                'Czech base',
-                'mapy.cz tourist',
-                'Czech winter'
-            ],
-        },
     ];
 
     const titlesByOrder = [
@@ -1372,7 +1300,6 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'OpenTopoMap',
         'OpenCycleMap',
         'OSM Outdoors',
-        'mapy.cz tourist',
         'CyclOSM',
         // Satellite
         'ESRI Satellite',
@@ -1388,8 +1315,6 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'Topomapper 1km',
 
         // local base layers
-        'Czech base',
-        'Czech winter',
 
         // map overlays
         '#custom-bottom',
