@@ -458,17 +458,17 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 {
                     title: 'OpenTopoMap',
                     isDefault: true,
-                    layer: L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+                    layer: L.tileLayer('https://tile-{s}.opentopomap.ru/{z}/{x}/{y}.png',
                         {
                             code: 'Otm',
                             isOverlay: false,
-                            maxNativeZoom: 17,
+                            maxNativeZoom: 18,
                             scaleDependent: true,
                             print: true,
                             jnx: true,
                             noCors: false,
                             shortName: 'opentopo',
-                            attribution: '<a href="https://opentopomap.org/">OpenTopoMap</a>',
+                            attribution: '<a href="https://opentopomap.ru/">OpenTopoMap</a>',
                         }
                     )
                 },
