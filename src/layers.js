@@ -1201,6 +1201,22 @@ class LayerGroupWithOptions extends L.LayerGroup {
                         }
                     )
                 },
+                {
+                    title: 'Extremum tracks',
+                    isDefault: true,
+                    layer: L.tileLayer('https://layers.extremum.org/v2/selector/tracks/{z}/{x}/{y}.png?' +
+                                       'layers=Extremum/LizaAlert/Otklik/Other',
+                        {
+                            code: 'aT',
+                            isOverlay: true,
+                            isOverlayTransparent: true,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: false,
+                            shortName: 'extremum_tracks'
+                        }
+                    )
+                },
     ];
 
     const groupsDefs = [
@@ -1284,6 +1300,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'Strava heatmap (run)',
                 'Strava heatmap (ride)',
                 'Strava heatmap (winter)',
+                'Extremum tracks',
             ],
 
         },
@@ -1370,6 +1387,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'Soviet topo maps grid',
         'Wikimapia',
         'OpenRailwayMap',
+        'Extremum tracks',
 
         // point overlays
         'Mountain passes (Westra)',
