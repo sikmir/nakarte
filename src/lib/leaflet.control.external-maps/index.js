@@ -79,6 +79,10 @@ const ExternalMaps = L.Control.extend({
                 // all hemispheres
                 externalMap: new ExternalMap('https://www.meteoblue.com/en/weather/week/{lat}N{lng}E', 0, 18),
             },
+            {
+                title: 'ГИС для ПСР',
+                externalMap: new ExternalMap('https://gis.extremum.org/#z={zoom}&c={lat},{lng}', 0, 19),
+            },
         ],
     },
 
