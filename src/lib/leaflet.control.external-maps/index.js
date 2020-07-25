@@ -73,6 +73,10 @@ const ExternalMaps = L.Control.extend({
                 title: 'Wikimapia',
                 externalMap: new ExternalMap('https://wikimapia.org/#lat={lat}&lon={lng}&z={zoom}', 3, 22),
             },
+            {
+                title: 'ГИС для ПСР',
+                externalMap: new ExternalMap('https://gis.extremum.org/#z={zoom}&c={lat},{lng}', 0, 19),
+            },
         ],
     },
 
