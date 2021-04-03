@@ -1182,6 +1182,23 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     )
                 },
                 {
+                    title: 'Inkatlas Outdoor',
+                    isDefault: true,
+                    layer: L.tileLayer('https://tile.inkatlas.com/inkatlas/outdoor/{z}/{x}/{y}.png',
+                        {
+                            code: 'Ink',
+                            isOverlay: false,
+                            maxNativeZoom: 18,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: true,
+                            noCors: false,
+                            shortName: 'inkatlas',
+                            attribution: '<a href="https://inkatlas.com/">Inkatlas</a>',
+                        }
+                    )
+                },
+                {
                     title: 'My tracks',
                     isDefault: true,
                     layer: L.tileLayer('https://tiles.sikmir.ru/services/rtracks/tiles/{z}/{x}/{y}.png',
@@ -1252,7 +1269,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'OpenTopoMap',
                 'OpenCycleMap',
                 'OSM Outdoors',
-                'CyclOSM'
+                'CyclOSM',
+                'Inkatlas Outdoor'
             ],
         },
         {
@@ -1318,6 +1336,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'OpenCycleMap',
         'OSM Outdoors',
         'CyclOSM',
+        'Inkatlas Outdoor',
         // Satellite
         'ESRI Satellite',
         'Yandex Satellite',
