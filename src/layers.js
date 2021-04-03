@@ -1110,7 +1110,21 @@ class LayerGroupWithOptions extends L.LayerGroup {
                         }
                     )
                 },
-
+                {
+                    title: 'Inkatlas Outdoor',
+                    isDefault: true,
+                    layer: L.tileLayer('https://tile.inkatlas.com/inkatlas/outdoor/{z}/{x}/{y}.png',
+                        {
+                            code: 'Ink',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: true,
+                            shortName: 'inkatlas',
+                            attribution: '<a href="https://inkatlas.com/">Inkatlas</a>',
+                        }
+                    )
+                },
     ];
 
     const groupsDefs = [
@@ -1153,7 +1167,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'OSM Outdoors',
                 'mapy.cz tourist (Out of order)',
                 'mapy.cz winter (Out of order)',
-
+                'Inkatlas Outdoor',
             ],
         },
         {
@@ -1214,6 +1228,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'OSM Outdoors',
         'mapy.cz tourist (Out of order)',
         'mapy.cz winter (Out of order)',
+        'Inkatlas Outdoor',
         // Satellite
         'ESRI Satellite',
         'Yandex Satellite',
