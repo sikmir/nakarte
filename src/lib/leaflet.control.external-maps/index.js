@@ -77,6 +77,10 @@ const ExternalMaps = L.Control.extend({
                 title: 'ГИС для ПСР',
                 externalMap: new ExternalMap('https://gis.extremum.org/#z={zoom}&c={lat},{lng}', 0, 19),
             },
+            {
+                title: 'BRouter',
+                externalMap: new ExternalMap('https://brouter.de/brouter-web/#map={zoom}/{lat}/{lng}/standard', 0, 19),
+            },
         ],
     },
 
