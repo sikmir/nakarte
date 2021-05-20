@@ -85,6 +85,10 @@ const ExternalMaps = L.Control.extend({
                 title: 'gpx.studio',
                 externalMap: new ExternalMap('https://gpxstudio.github.io/', 0, 19),
             },
+            {
+                title: 'WTracks',
+                externalMap: new ExternalMap('https://opoto.github.io/wtracks/', 0, 19),
+            },
         ],
     },
 
