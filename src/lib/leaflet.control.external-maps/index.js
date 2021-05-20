@@ -89,6 +89,10 @@ const ExternalMaps = L.Control.extend({
                 title: 'WTracks',
                 externalMap: new ExternalMap('https://opoto.github.io/wtracks/', 0, 19),
             },
+            {
+                title: 'VeloRadar',
+                externalMap: new ExternalMap('http://veloradar.ru/map/', 0, 19),
+            },
         ],
     },
 
