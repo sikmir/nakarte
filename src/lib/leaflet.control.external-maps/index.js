@@ -81,6 +81,10 @@ const ExternalMaps = L.Control.extend({
                 title: 'BRouter',
                 externalMap: new ExternalMap('https://brouter.de/brouter-web/#map={zoom}/{lat}/{lng}/standard', 0, 19),
             },
+            {
+                title: 'gpx.studio',
+                externalMap: new ExternalMap('https://gpxstudio.github.io/', 0, 19),
+            },
         ],
     },
 
