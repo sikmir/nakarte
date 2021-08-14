@@ -1233,6 +1233,21 @@ class LayerGroupWithOptions extends L.LayerGroup {
                         }
                     )
                 },
+                {
+                    title: 'Tracks by @sikmir (vector)',
+                    isDefault: true,
+                    layer: new L.Layer.MyTracksVector(
+                        {
+                            code: 'Mytv',
+                            isOverlay: true,
+                            isOverlayTransparent: true,
+                            scaleDependent: true,
+                            print: false,
+                            jnx: false,
+                            shortName: 'my_vtracks'
+                        }
+                    )
+                },
     ];
 
     const groupsDefs = [
@@ -1318,6 +1333,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'Strava heatmap (winter)',
                 'Extremum tracks',
                 'Tracks by @sikmir (raster)',
+                'Tracks by @sikmir (vector)',
             ],
 
         },
@@ -1406,6 +1422,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'OpenRailwayMap',
         'Extremum tracks',
         'Tracks by @sikmir (raster)',
+        'Tracks by @sikmir (vector)',
 
         // point overlays
         'Mountain passes (Westra)',
