@@ -1,0 +1,23 @@
+.mytracks-cycling {
+    background-image: url("cycling.png");
+}
+
+.mytracks-hiking {
+    background-image: url("hiking.png");
+}
+
+.mytracks-kayaking {
+    background-image: url("kayaking.png");
+}
+
+.mytracks-orienteering {
+    background-image: url("orienteering.png");
+}
+
+.mytracks-running {
+    background-image: url("running.png");
+}
+
+.mytracks-skiing {
+    background-image: url("skiing.png");
+}
