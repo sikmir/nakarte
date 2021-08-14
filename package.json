@@ -83,6 +83,7 @@
     "knockout": "^3.4.0",
     "leaflet": "1.0.3",
     "leaflet-rotatedmarker": "^0.2.0",
+    "leaflet.vectorgrid": "git+https://github.com/Leaflet/Leaflet.VectorGrid.git",
     "load-script": "^2.0.0",
     "mapillary-js": "4.1.1",
     "pbf": "^3.0.5",
