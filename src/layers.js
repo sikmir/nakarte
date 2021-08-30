@@ -1134,6 +1134,21 @@ class LayerGroupWithOptions extends L.LayerGroup {
                         }
                     )
                 },
+                {
+                    title: 'ÖPNVKarte',
+                    isDefault: true,
+                    layer: L.tileLayer('https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',
+                        {
+                            code: 'Opnv',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: true,
+                            shortName: 'opnvkarte',
+                            attribution: '<a href="https://memomaps.de/">memomaps.de</a>',
+                        }
+                    )
+                },
     ];
 
     const groupsDefs = [
@@ -1177,6 +1192,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'mapy.cz tourist',
                 'mapy.cz winter',
                 'Inkatlas Outdoor',
+                'ÖPNVKarte',
             ],
         },
         {
@@ -1238,6 +1254,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'mapy.cz tourist',
         'mapy.cz winter',
         'Inkatlas Outdoor',
+        'ÖPNVKarte',
         // Satellite
         'ESRI Satellite',
         'Yandex Satellite',
