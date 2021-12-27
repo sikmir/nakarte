@@ -52,6 +52,21 @@ class GoogleEarthMap extends ExternalMap {
     }
 }
 
+class JOSM extends ExternalMap {
+    constructor() {
+        super('http://127.0.0.1:8111/load_and_zoom?left={l}&right={r}&top={t}&bottom={b}', 0, 19);
+    }
+
+    async getData(map_) {
+        const bounds = map_.getBounds();
+        const l = bounds.getWest();
+        const r = bounds.getEast();
+        const t = bounds.getNorth();
+        const b = bounds.getSouth();
+        return {l, r, t, b};
+    }
+}
+
 const ExternalMaps = L.Control.extend({
     options: {
         externalMaps: [
@@ -93,6 +108,7 @@ const ExternalMaps = L.Control.extend({
                 title: 'VeloRadar',
                 externalMap: new ExternalMap('http://veloradar.ru/map/', 0, 19),
             },
+            {title: 'JOSM', externalMap: new JOSM()},
         ],
     },
 
