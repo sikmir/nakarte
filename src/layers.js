@@ -1223,6 +1223,22 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     )
                 },
                 {
+                    title: 'OpenGeofiction',
+                    isDefault: false,
+                    layer: L.tileLayer('https://tile.opengeofiction.net/ogf-carto/{z}/{x}/{y}.png',
+                        {
+                            code: 'Ogf',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: true,
+                            shortName: 'ogf',
+                            attribution: '<a href="https://opengeofiction.net/copyright">' +
+                                '&copy; OpenGeofiction contributors</a>',
+                        }
+                    )
+                },
+                {
                     title: 'Sentinel-2 L1C',
                     isDefault: true,
                     layer: L.tileLayer.wms(
@@ -1331,6 +1347,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'mapy.cz winter',
                 'Inkatlas Outdoor',
                 'ÖPNVKarte',
+                'OpenGeofiction',
             ],
         },
         {
@@ -1401,6 +1418,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'mapy.cz winter',
         'Inkatlas Outdoor',
         'ÖPNVKarte',
+        'OpenGeofiction',
         // Satellite
         'ESRI Satellite',
         'Yandex Satellite',
