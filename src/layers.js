@@ -1315,6 +1315,23 @@ class LayerGroupWithOptions extends L.LayerGroup {
                         }
                     )
                 },
+                {
+                    title: 'EEKO',
+                    isDefault: true,
+                    layer: L.tileLayer('https://ngw.fppd.cgkipd.ru/tile/56/{z}/{x}/{y}.png',
+                        {
+                            code: 'Eeko',
+                            isOverlay: true,
+                            isOverlayTransparent: true,
+                            maxNativeZoom: 14,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: true,
+                            shortName: 'eekomap',
+                            attribution: '© Единая электронная картографическая основа России'
+                        }
+                    )
+                },
     ];
 
     const groupsDefs = [
@@ -1341,6 +1358,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'GGC 500m',
                 'Topo 500m',
                 'GGC 250m',
+                'EEKO',
                 'Slazav Moscow region map',
                 'Races',
                 'O-sport',
@@ -1472,6 +1490,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'Topo 500m',
         'Caucasus 500m',
         'GGC 250m',
+        'EEKO',
         'Topo 250m',
         'Montenegro topo 250m',
         'Switzerland topo',
