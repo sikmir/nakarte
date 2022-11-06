@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "node scripts/build.js",
+    "decrypt": "gpg --decrypt src/secrets.js.gpg > src/secrets.js",
     "start": "cross-env NODE_ENV=development webpack serve --open --config webpack/webpack.config.js",
     "lint:code": "cross-env NODE_ENV=production eslint --ext js .",
     "lint:style": "stylelint '**/*.css'",
