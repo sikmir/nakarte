@@ -260,7 +260,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 {
                     title: 'Slazav mountains',
                     isDefault: true,
-                    layer: L.tileLayer("https://slazav.xyz/tiles/hr/{x}-{y}-{z}.png",
+                    layer: L.tileLayer("https://tiles.sikmir.ru/services/hr/tiles/{z}/{x}/{y}.png",
                         {
                             code: 'Q',
                             isOverlay: true,
@@ -364,7 +364,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 {
                     title: 'Slazav Moscow region map',
                     isDefault: true,
-                    layer: L.tileLayer("https://slazav.xyz/tiles/podm/{x}-{y}-{z}.png",
+                    layer: L.tileLayer("https://tiles.sikmir.ru/services/podm/tiles/{z}/{x}/{y}.png",
                         {
                             code: 'Z',
                             isOverlay: true,
