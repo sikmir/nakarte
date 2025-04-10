@@ -475,6 +475,23 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     )
                 },
                 {
+                    title: 'OpenTopoMap.cz',
+                    isDefault: true,
+                    layer: L.tileLayer('https://tile-{s}.opentopomap.cz/{z}/{x}/{y}.png',
+                        {
+                            code: 'Otmcz',
+                            isOverlay: false,
+                            maxNativeZoom: 18,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: true,
+                            noCors: false,
+                            shortName: 'opentopocz',
+                            attribution: '<a href="https://opentopomap.cz/">OpenTopoMap.cz</a>',
+                        }
+                    )
+                },
+                {
                     title: 'OpenRailwayMap',
                     isDefault: true,
                     layer: L.tileLayer('http://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
@@ -1341,6 +1358,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
             title: 'OpenStreetMap alternatives',
             layers: [
                 'OpenTopoMap',
+                'OpenTopoMap.cz',
                 'OpenCycleMap',
                 'OSM Outdoors',
                 'mapy.cz tourist',
@@ -1412,6 +1430,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'OpenStreetMap',
         'CyclOSM',
         'OpenTopoMap',
+        'OpenTopoMap.cz',
         'OpenCycleMap',
         'OSM Outdoors',
         'mapy.cz tourist',
