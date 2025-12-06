@@ -27,3 +27,16 @@
 .highlight a, .highlight a:hover {
     background-color: #cce8ff;
 }
+
+@media (prefers-color-scheme: dark) {
+    .button-with-bar .bar {
+        background-color: #222 !important;
+        color: #fff !important;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65) !important;
+    }
+
+    .highlight a,
+    .highlight a:hover {
+        background-color: #004080 !important;
+    }
+}

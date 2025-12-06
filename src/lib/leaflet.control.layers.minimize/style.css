@@ -6,3 +6,9 @@
 .leaflet-control-layers .leaflet-control-button-toggle {
     background-image: url("layers.svg");
 }
+
+@media (prefers-color-scheme: dark) {
+    .leaflet-control-layers .leaflet-control-button-toggle {
+        filter: invert(1);
+    }
+}

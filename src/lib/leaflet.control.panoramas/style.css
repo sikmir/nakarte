@@ -134,3 +134,14 @@
     width: 12px !important;
     height: 12px !important;
 }
+
+@media (prefers-color-scheme: dark) {
+    .icon-panoramas {
+        filter: invert(1);
+    }
+
+    .panoramas-list input[type='checkbox'],
+    .panoramas-list input[type='radio'] {
+        filter: invert(1);
+    }
+}

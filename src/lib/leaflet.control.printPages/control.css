@@ -124,3 +124,51 @@
 .icon-printer {
     background-image: url("images/printer.svg");
 }
+
+@media (prefers-color-scheme: dark) {
+    .control-print-pages {
+        background-color: #222 !important;
+        color: #fff !important;
+    }
+
+    .control-print-pages .pages-num.pages-not-null {
+        border-bottom: 1px dotted #999 !important;
+    }
+
+    .button-add-page-horiz,
+    .button-add-page-vert,
+    .button-remove-pages,
+    .button-settings {
+        filter: invert(1);
+    }
+
+    .control-print-pages .layout > tbody > tr > td {
+        border-top: 1px solid #333 !important;
+    }
+
+    .preset-values a {
+        color: #aaa !important;
+        border-bottom: 1px dotted #aaa !important;
+    }
+
+    .preset-values .selected {
+        border-bottom: 1px solid #fff !important;
+        color: #fff !important;
+    }
+
+    .icon-printer {
+        filter: invert(1);
+    }
+
+    .control-print-pages input,
+    .control-print-pages select {
+        background-color: #333 !important;
+        color: #fff !important;
+        border: 1px solid #666 !important;
+    }
+
+    .control-print-pages input[type='checkbox'],
+    .control-print-pages input[type='radio'] {
+        filter: invert(1);
+    }
+}

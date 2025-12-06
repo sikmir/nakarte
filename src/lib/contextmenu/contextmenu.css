@@ -52,3 +52,36 @@
     color: hsl(0, 0%, 20%);
     font-weight: bold;
 }
+
+@media (prefers-color-scheme: dark) {
+    .contextmenu {
+        background-color: #222 !important;
+        color: #fff !important;
+    }
+
+    .contextmenu .item {
+        color: #fff !important;
+    }
+
+    .contextmenu .item.action:hover {
+        background-color: #006abe !important;
+        color: #fff !important;
+    }
+
+    .contextmenu .separator {
+        border-bottom: 1px solid #444 !important;
+    }
+
+    .contextmenu .separator span {
+        background-color: #222 !important;
+        color: #aaa !important;
+    }
+
+    .contextmenu .disabled {
+        color: #666 !important;
+    }
+
+    .contextmenu .header {
+        color: #fff !important;
+    }
+}

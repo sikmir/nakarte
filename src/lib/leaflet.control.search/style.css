@@ -139,3 +139,65 @@
 .icon-search {
     background-image: url("search.svg");
 }
+
+@media (prefers-color-scheme: dark) {
+    .leaflet-search-input-wrapper {
+        background-color: #222 !important;
+        border: 1px solid #666 !important;
+    }
+
+    .leaflet-search-input {
+        color: #fff !important;
+        background-color: #222 !important;
+    }
+
+    .leaflet-search-input::placeholder {
+        color: #999 !important;
+    }
+
+    .leaflet-search-clear-button {
+        filter: invert(1);
+    }
+
+    .leaflet-search-results li {
+        background-color: #222 !important;
+        border: 1px solid #666 !important;
+        color: #fff !important;
+    }
+
+    .leaflet-search-results .highlighted {
+        background-color: #006abe !important;
+        color: #fff !important;
+    }
+
+    .leaflet-search-results .address {
+        color: #aaa !important;
+    }
+
+    .leaflet-search-results .category {
+        color: #aaa !important;
+    }
+
+    .leaflet-search-results .icon {
+        filter: invert(1);
+    }
+
+    .leaflet-search-error {
+        background-color: #222 !important;
+        border: 1px solid #666 !important;
+        color: #fff !important;
+    }
+
+    .leaflet-search-results li.search-provider-attribution {
+        color: #999 !important;
+        background-color: #222 !important;
+    }
+
+    .leaflet-search-results li.search-provider-attribution a {
+        color: #999 !important;
+    }
+
+    .icon-search {
+        filter: invert(1);
+    }
+}

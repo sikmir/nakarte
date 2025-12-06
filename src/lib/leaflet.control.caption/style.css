@@ -16,3 +16,18 @@
 .leaflet-control-container .leaflet-control-caption a:hover {
     text-decoration: underline;
 }
+
+@media (prefers-color-scheme: dark) {
+    .leaflet-control-container .leaflet-control-caption {
+        background: rgba(0, 0, 0, 0.7) !important;
+        color: #fff !important;
+    }
+
+    .leaflet-control-container .leaflet-control-caption a {
+        color: #0090ff !important;
+    }
+
+    .leaflet-control-container .leaflet-control-caption a:hover {
+        color: #7fc7ff !important;
+    }
+}
