@@ -84,3 +84,23 @@
     left: 0;
     bottom: 0;
 }
+
+@media (prefers-color-scheme: dark) {
+    .leaflet-control-jnx .zoom-choices,
+    .leaflet-control-jnx .zoom-choices th,
+    .leaflet-control-jnx .zoom-choices td {
+        border: 1px dotted #666 !important;
+    }
+
+    .leaflet-control-jnx .zoom-choice.selected {
+        background-color: hsl(200, 70%, 30%) !important;
+    }
+
+    .leaflet-control-jnx .zoom-choice:hover {
+        background-color: #333 !important;
+    }
+
+    .leaflet-control-jnx .cb-fix-zoom {
+        filter: invert(1);
+    }
+}

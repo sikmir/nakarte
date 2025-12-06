@@ -53,3 +53,22 @@
     margin-top: 3px;
     margin-bottom: 3px;
 }
+
+@media (prefers-color-scheme: dark) {
+    .icon-coordinates {
+        filter: invert(1);
+    }
+
+    .leaflet-coordinates-menu-fmt {
+        color: #aaa !important;
+    }
+
+    .leaflet-coordinates-divider {
+        border-top: 1px solid #444 !important;
+    }
+
+    .leaflet-coordinates-format-radio,
+    .leaflet-coordinates-elevation-toggle {
+        filter: invert(1);
+    }
+}

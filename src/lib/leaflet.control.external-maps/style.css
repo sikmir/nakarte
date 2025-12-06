@@ -1,3 +1,9 @@
 .icon-external-links {
     background-image: url("external-link.svg");
 }
+
+@media (prefers-color-scheme: dark) {
+    .icon-external-links {
+        filter: invert(1);
+    }
+}
