@@ -307,3 +307,112 @@
 .tracks-hide-all {
     margin-left: 10px;
 }
+
+@media (prefers-color-scheme: dark) {
+    .leaflet-control-tracklist {
+        background-color: #222 !important;
+        color: #fff !important;
+    }
+
+    .leaflet-control-tracklist .hint {
+        color: #999 !important;
+    }
+
+    .leaflet-control-tracklist .button:not(.open-file):not(.add-track):not(.menu-icon):not(.download-url) {
+        background-color: #222 !important;
+        border: 1px solid #999 !important;
+    }
+
+    .leaflet-control-tracklist .button:not(.open-file):not(.add-track):not(.menu-icon):not(.download-url):hover {
+        background-color: #000 !important;
+    }
+
+    .leaflet-control-tracklist .button-add-point.active,
+    .leaflet-control-tracklist .button-add-track.active {
+        background-color: #444 !important;
+        border-color: #fff !important;
+    }
+
+    .leaflet-control-tracklist .input-url {
+        background-color: #333 !important;
+        color: #fff !important;
+        border: 1px solid #666 !important;
+    }
+
+    .leaflet-control-tracklist .open-file,
+    .leaflet-control-tracklist .add-track,
+    .leaflet-control-tracklist .menu-icon,
+    .leaflet-control-tracklist .download-url {
+        filter: invert(1) !important;
+    }
+
+    .leaflet-control-tracklist .button-add-track,
+    .leaflet-control-tracklist .button-add-point {
+        filter: invert(1) !important;
+    }
+
+    .leaflet-control-tracklist .track-name {
+        color: #fff !important;
+        border-bottom: 1px dashed #999 !important;
+    }
+
+    .leaflet-control-tracklist .track-text-button {
+        color: #fff !important;
+    }
+
+    .leaflet-control-tracklist .button-length {
+        color: #aaa !important;
+        background-color: #222 !important;
+        border: 1px solid #666 !important;
+    }
+
+    .leaflet-control-tracklist .button-length:hover {
+        background-color: #333 !important;
+    }
+
+    .leaflet-control-tracklist .button-add-track:hover:not(.active),
+    .leaflet-control-tracklist .button-add-point:hover:not(.active) {
+        filter: invert(1) brightness(0.8) !important;
+    }
+
+    .leaflet-control-tracklist .ticks-enabled {
+        color: #fff !important;
+        border-color: #fff !important;
+    }
+
+    .track-waypoint {
+        text-shadow: 1px 0 1px #000, 1px 1px 1px #000, 0 1px 1px #000, -1px 1px 1px #000, -1px 0 1px #000,
+            -1px -1px 1px #000, 0 -1px 1px #000, 1px -1px 1px #000;
+    }
+
+    .icon-tracks {
+        filter: invert(1);
+    }
+
+    .leaflet-control-tracklist .hover {
+        background-color: #333 !important;
+    }
+
+    .leaflet-control-tracklist .edit {
+        background-color: #004080 !important;
+    }
+
+    .leaflet-control-tracklist .formats-hint-more {
+        background-color: #333 !important;
+        color: #aaa !important;
+    }
+
+    .track-tooltip-area-calc-error {
+        color: #666 !important;
+    }
+
+    .tracks-show-all,
+    .tracks-hide-all {
+        border-bottom: 1px dashed #999 !important;
+        color: #fff !important;
+    }
+
+    .leaflet-control-tracklist .visibility-switch {
+        filter: invert(1);
+    }
+}

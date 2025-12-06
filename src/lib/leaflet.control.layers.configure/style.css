@@ -200,3 +200,93 @@
 .leaflet-layers-config-window .layer-label:hover .hotkey-input {
     border-color: hsl(0, 0%, 80%);
 }
+
+@media (prefers-color-scheme: dark) {
+    .leaflet-control-layers-top-row .button.icon-settings,
+    .leaflet-control-layers-top-row .button.icon-edit {
+        filter: invert(1);
+    }
+
+    .leaflet-control-layers-top-row .button.icon-settings:hover,
+    .leaflet-control-layers-top-row .button.icon-edit:hover {
+        filter: invert(1) brightness(0.8);
+    }
+
+    .leaflet-layers-config-window {
+        background-color: #222 !important;
+        color: #fff !important;
+    }
+
+    .leaflet-layers-config-window .button,
+    .custom-layers-window .button {
+        background-color: #222 !important;
+        color: #fff !important;
+        border: 1px solid #999 !important;
+    }
+
+    .leaflet-layers-config-window .button:hover,
+    .custom-layers-window .button:hover {
+        background-color: #0094ff !important;
+        color: #fff !important;
+    }
+
+    .leaflet-layers-config-window .section-header a {
+        color: #aaa !important;
+    }
+
+    .custom-layers-window {
+        background-color: #222 !important;
+        color: #fff !important;
+    }
+
+    .custom-layers-window textarea,
+    .custom-layers-window input,
+    .custom-layers-window select {
+        background-color: #333 !important;
+        color: #fff !important;
+        border: 1px solid #666 !important;
+    }
+
+    .custom-layers-window .doc-link {
+        color: #999 !important;
+    }
+
+    .custom-layers-window hr {
+        border-top: 1px solid #444 !important;
+    }
+
+    .custom-layers-window .hint {
+        color: #999 !important;
+    }
+
+    .leaflet-layers-config-window .hotkey-input {
+        color: #aaa !important;
+        background-color: #222 !important;
+    }
+
+    .leaflet-layers-config-window .error {
+        color: hsl(0, 80%, 70%) !important;
+        background-color: #1a1a1a !important;
+    }
+
+    .leaflet-layers-config-window .hotkey-input:focus {
+        border-color: #fff !important;
+        color: #fff !important;
+        background-color: #333 !important;
+    }
+
+    .leaflet-layers-config-window .layer-label:hover .hotkey-input {
+        border-color: #666 !important;
+    }
+
+    .custom-layer-edit-button {
+        filter: invert(1);
+    }
+
+    .leaflet-layers-config-window input[type='checkbox'],
+    .leaflet-layers-config-window input[type='radio'],
+    .custom-layers-window input[type='checkbox'],
+    .custom-layers-window input[type='radio'] {
+        filter: invert(1);
+    }
+}

@@ -1,3 +1,9 @@
 .icon-ruler {
-    background-image: url("images/ruler.svg");
+    background-image: url('images/ruler.svg');
+}
+
+@media (prefers-color-scheme: dark) {
+    .icon-ruler {
+        filter: invert(1);
+    }
 }
