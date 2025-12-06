@@ -167,3 +167,67 @@
     font-size: 18px;
 }
 
+@media (prefers-color-scheme: dark) {
+    .elevation-profile-container {
+        background-color: #222 !important;
+        color: #fff !important;
+        border-top: 1px solid #444 !important;
+    }
+
+    .elevation-profile-properties {
+        border-right: 1px solid #444 !important;
+    }
+
+    .elevation-profile-properties .start-group td {
+        border-top: 1px solid #555 !important;
+    }
+
+    .elevation-profile-properties-selected {
+        background-color: #004080 !important;
+    }
+
+    .elevation-profile-grid-label {
+        color: #fff !important;
+    }
+
+    .elevation-profile-cursor {
+        border-right: 1px solid #0090ff !important;
+    }
+
+    .elevation-profile-cursor-label {
+        color: #fff !important;
+        text-shadow: 1px 0 0 #000, 1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000, -1px -1px 0 #000,
+            0 -1px 0 #000, 1px -1px 0 #000;
+    }
+
+    .elevation-profile-selection {
+        background-color: #0090ff !important;
+        opacity: 0.3;
+    }
+
+    .elevation-profile-marker-icon {
+        background-color: #0090ff !important;
+    }
+
+    .elevation-profile-marker-label {
+        color: #fff !important;
+        text-shadow: 1px 0 0 #000, 1px 1px 1px #000, 0 1px 1px #000, -1px 1px 1px #000, -1px 0 1px #000,
+            -1px -1px 1px #000, 0 -1px 1px #000, 1px -1px 1px #000;
+    }
+
+    .elevation-profile-close {
+        filter: invert(1);
+    }
+
+    .elevation-profile-container svg path[stroke='green'] {
+        stroke: #4a4 !important;
+    }
+
+    .elevation-profile-container svg path[fill='#5599ff'] {
+        fill: #0090ff !important;
+    }
+
+    .elevation-profile-container svg path[stroke='#0078A8'] {
+        stroke: #0090ff !important;
+    }
+}

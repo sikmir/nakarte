@@ -137,3 +137,61 @@
     padding: 0;
     margin: 0 0 0 2px;
 }
+
+@media (prefers-color-scheme: dark) {
+    .leaflet-control.control-form,
+    .leaflet-control .control-form {
+        background-color: #222 !important;
+        color: #fff !important;
+    }
+
+    .leaflet-control.control-form input[type='text'],
+    .leaflet-control.control-form input[type='checkbox'],
+    .leaflet-control.control-form select {
+        background-color: #333 !important;
+        color: #fff !important;
+        border: 1px solid #666 !important;
+    }
+
+    .leaflet-control .image-button {
+        background-color: #222 !important;
+        border: 1px solid #999 !important;
+    }
+
+    .leaflet-control .text-button {
+        background-color: #222 !important;
+        border: 1px solid #999 !important;
+        color: #fff !important;
+    }
+
+    .leaflet-control .image-button:hover,
+    .leaflet-control .text-button:hover {
+        background-color: #0094ff !important;
+    }
+
+    .leaflet-control-button {
+        background-color: #222 !important;
+    }
+
+    .leaflet-control-button:hover {
+        background-color: #000 !important;
+    }
+
+    .leaflet-bottom.leaflet-left .button-minimize,
+    .leaflet-bottom.leaflet-right .button-minimize,
+    .leaflet-top.leaflet-left .button-minimize,
+    .leaflet-top.leaflet-right .button-minimize {
+        filter: invert(1) !important;
+    }
+
+    .leaflet-bottom.leaflet-left .button-minimize:hover,
+    .leaflet-bottom.leaflet-right .button-minimize:hover,
+    .leaflet-top.leaflet-left .button-minimize:hover,
+    .leaflet-top.leaflet-right .button-minimize:hover {
+        filter: invert(1) brightness(0.8) !important;
+    }
+
+    .leaflet-control-button-toggle {
+        filter: invert(1);
+    }
+}
