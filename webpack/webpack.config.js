@@ -91,6 +91,7 @@ const plugins = [
     ...(isProduction || isDevelopment
         ? [
               new StyleLintPlugin({
+                  cache: false,
                   config: {extends: 'stylelint-config-recommended'},
                   files: ['src/**/*.css', 'vendored/**/*.css'],
                   emitWarning: isDevelopment,
