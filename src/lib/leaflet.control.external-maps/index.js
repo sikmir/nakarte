@@ -114,6 +114,10 @@ const ExternalMaps = L.Control.extend({
                 title: 'VeloRadar',
                 externalMap: new ExternalMap('http://veloradar.ru/map/', 0, 19),
             },
+            {
+                title: 'nakarte.me',
+                externalMap: new ExternalMap('http://nakarte.me/', 0, 19),
+            },
             {title: 'JOSM', externalMap: new JOSM()},
         ],
     },
