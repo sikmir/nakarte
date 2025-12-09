@@ -876,12 +876,12 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     )
                 },
                 {
-                    title: 'mapy.cz tourist (Out of order)',
+                    title: 'mapy.cz tourist',
                     isDefault: true,
                     layer: new RetinaTileLayer(
                         [
-                            'https://proxy.nakarte.me/mapy/turist-en/{z}-{x}-{y}',
-                            'https://proxy.nakarte.me/mapy/turist-en/retina/{z}-{x}-{y}',
+                            'https://tiles.windy.com/v1/maptiles/outdoor/256/{z}/{x}/{y}',
+                            'https://tiles.windy.com/v1/maptiles/outdoor/256%402x/{z}/{x}/{y}',
                         ],
                         {
                             code: 'Czt',
@@ -893,37 +893,24 @@ class LayerGroupWithOptions extends L.LayerGroup {
                             shortName: 'czech_tourist',
                             hotkey: 'H',
                             attribution: '<a href="https://mapy.cz/turisticka">mapy.cz outdoor map</a>',
-                            maxZoom: -1,
                         }
                     )
                 },
                 {
-                    title: 'mapy.cz winter (Out of order)',
+                    title: 'mapy.cz winter',
                     isDefault: false,
-                    layer: new LayerGroupWithOptions([
-                        new L.TileLayer('https://proxy.nakarte.me/mapy/winter-en-down/{z}-{x}-{y}', {
+                    layer: new L.TileLayer('https://tiles.windy.com/v1/maptiles/winter/256/{z}/{x}/{y}',
+                        {
+                            code: 'Czw',
+                            isOverlay: false,
                             tms: false,
                             print: true,
-                            isOverlay: false,
                             jnx: true,
                             scaleDependent: true,
                             shortName: 'czech_winter',
-                        }),
-                        new L.TileLayer('https://proxy.nakarte.me/mapy/winter-en-up/{z}-{x}-{y}', {
-                            tms: false,
-                            print: true,
-                            jnx: false,
-                            isOverlay: true,
-                            isOverlayTransparent: true,
-                            scaleDependent: true,
-                        }),
-                    ], {
-                        code: 'Czw',
-                        isOverlay: false,
-                        isWrapper: true,
-                        attribution: '<a href="https://mapy.cz/zimni">mapy.cz winter map</a>',
-                        maxZoom: -1,
-                    }),
+                            attribution: '<a href="https://mapy.cz/zimni">mapy.cz winter map</a>',
+                        }
+                    )
                 },
                 {
                     title: 'Finland Topo',
@@ -1362,8 +1349,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
                 'OpenTopoMap.cz',
                 'OpenCycleMap',
                 'OSM Outdoors',
-                'mapy.cz tourist (Out of order)',
-                'mapy.cz winter (Out of order)',
+                'mapy.cz tourist',
+                'mapy.cz winter',
                 'Inkatlas Outdoor',
                 'ÖPNVKarte',
                 'OpenGeofiction',
@@ -1434,8 +1421,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'OpenTopoMap.cz',
         'OpenCycleMap',
         'OSM Outdoors',
-        'mapy.cz tourist (Out of order)',
-        'mapy.cz winter (Out of order)',
+        'mapy.cz tourist',
+        'mapy.cz winter',
         'Inkatlas Outdoor',
         'ÖPNVKarte',
         'OpenGeofiction',
