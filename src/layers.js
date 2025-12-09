@@ -707,12 +707,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     isDefault: false,
                     layer: new RetinaTileLayer(
                         [
-                            urlViaCorsProxy(
-                                'https://content-a.strava.com/identified/globalheat/all/hot/{z}/{x}/{y}.png?px=256'
-                            ),
-                            urlViaCorsProxy(
-                                'https://content-a.strava.com/identified/globalheat/all/hot/{z}/{x}/{y}.png?px=512'
-                            ),
+                            'https://content-a.strava.com/anon/globalheat/all/hot/{z}/{x}/{y}.png?px=256',
+                            'https://content-a.strava.com/anon/globalheat/all/hot/{z}/{x}/{y}.png?px=512',
                         ],
                         {
                             code: 'Sa',
@@ -724,7 +720,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                             subdomains: 'abc',
                             noCors: false,
                             shortName: 'strava_all',
-                            retinaOptionsOverrides: [{maxNativeZoom: 16}, {maxNativeZoom: 15}],
+                            retinaOptionsOverrides: [{maxNativeZoom: 11}, {maxNativeZoom: 11}],
                             attribution: '<a href="https://www.strava.com/heatmap">Strava Global Heatmap</a>',
                             opacity: 0.75,
                         }
@@ -735,12 +731,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     isDefault: false,
                     layer: new RetinaTileLayer(
                         [
-                            urlViaCorsProxy(
-                                'https://content-a.strava.com/identified/globalheat/run/hot/{z}/{x}/{y}.png?px=256'
-                            ),
-                            urlViaCorsProxy(
-                                'https://content-a.strava.com/identified/globalheat/run/hot/{z}/{x}/{y}.png?px=512'
-                            ),
+                            'https://content-a.strava.com/anon/globalheat/run/hot/{z}/{x}/{y}.png?px=256',
+                            'https://content-a.strava.com/anon/globalheat/run/hot/{z}/{x}/{y}.png?px=512',
                         ],
                         {
                             code: 'Sr',
@@ -752,7 +744,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                             subdomains: 'abc',
                             noCors: false,
                             shortName: 'strava_run',
-                            retinaOptionsOverrides: [{maxNativeZoom: 16}, {maxNativeZoom: 15}],
+                            retinaOptionsOverrides: [{maxNativeZoom: 11}, {maxNativeZoom: 11}],
                             attribution: '<a href="https://www.strava.com/heatmap">Strava Global Heatmap</a>',
                             opacity: 0.75,
                         }
@@ -763,12 +755,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     isDefault: false,
                     layer: new RetinaTileLayer(
                         [
-                            urlViaCorsProxy(
-                                'https://content-a.strava.com/identified/globalheat/ride/hot/{z}/{x}/{y}.png?px=256'
-                            ),
-                            urlViaCorsProxy(
-                                'https://content-a.strava.com/identified/globalheat/ride/hot/{z}/{x}/{y}.png?px=512'
-                            ),
+                            'https://content-a.strava.com/anon/globalheat/ride/hot/{z}/{x}/{y}.png?px=256',
+                            'https://content-a.strava.com/anon/globalheat/ride/hot/{z}/{x}/{y}.png?px=512',
                         ],
                         {
                             code: 'Sb',
@@ -780,7 +768,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                             subdomains: 'abc',
                             noCors: false,
                             shortName: 'strava_ride',
-                            retinaOptionsOverrides: [{maxNativeZoom: 16}, {maxNativeZoom: 15}],
+                            retinaOptionsOverrides: [{maxNativeZoom: 11}, {maxNativeZoom: 11}],
                             attribution: '<a href="https://www.strava.com/heatmap">Strava Global Heatmap</a>',
                             opacity: 0.75,
                         }
@@ -791,12 +779,8 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     isDefault: false,
                     layer: new RetinaTileLayer(
                         [
-                            urlViaCorsProxy(
-                                'https://content-a.strava.com/identified/globalheat/winter/hot/{z}/{x}/{y}.png?px=256'
-                            ),
-                            urlViaCorsProxy(
-                                'https://content-a.strava.com/identified/globalheat/winter/hot/{z}/{x}/{y}.png?px=512'
-                            ),
+                            'https://content-a.strava.com/anon/globalheat/winter/hot/{z}/{x}/{y}.png?px=256',
+                            'https://content-a.strava.com/anon/globalheat/winter/hot/{z}/{x}/{y}.png?px=512',
                         ],
                         {
                             code: 'Sw',
@@ -808,7 +792,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
                             subdomains: 'abc',
                             noCors: false,
                             shortName: 'strava_winter',
-                            retinaOptionsOverrides: [{maxNativeZoom: 16}, {maxNativeZoom: 15}],
+                            retinaOptionsOverrides: [{maxNativeZoom: 11}, {maxNativeZoom: 11}],
                             attribution: '<a href="https://www.strava.com/heatmap">Strava Global Heatmap</a>',
                             opacity: 0.75,
                         }
