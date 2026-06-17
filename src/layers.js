@@ -491,6 +491,29 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     )
                 },
                 {
+                    title: 'MapMagic',
+                    isDefault: true,
+                    layer: new RetinaTileLayer(
+                        [
+                            null,
+                            'https://tile.mapmagic.app/{z}/{x}/{y}.png',
+                        ],
+                        {
+                            code: 'Mgc',
+                            isOverlay: false,
+                            maxNativeZoom: 18,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: true,
+                            noCors: false,
+                            shortName: 'mapmagic',
+                            tileSize: 512,
+                            zoomOffset: -1,
+                            attribution: '<a href="https://mapmagic.app">MapMagic</a>',
+                        }
+                    )
+                },
+                {
                     title: 'OpenRailwayMap',
                     isDefault: true,
                     layer: L.tileLayer('http://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',
@@ -1331,6 +1354,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
             layers: [
                 'OpenTopoMap',
                 'OpenTopoMap.cz',
+                'MapMagic',
                 'OpenCycleMap',
                 'OSM Outdoors',
                 'mapy.cz tourist',
@@ -1403,6 +1427,7 @@ class LayerGroupWithOptions extends L.LayerGroup {
         'CyclOSM',
         'OpenTopoMap',
         'OpenTopoMap.cz',
+        'MapMagic',
         'OpenCycleMap',
         'OSM Outdoors',
         'mapy.cz tourist',
