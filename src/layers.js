@@ -186,13 +186,11 @@ class LayerGroupWithOptions extends L.LayerGroup {
                     title: 'Soviet topo maps (AtloMaps)',
                     isDefault: true,
                     layer: L.tileLayer(
-                        urlViaCorsProxy(
-                            'https://extern.atlogis.com/rtm/{z}/{x}/{y}'
-                        ),
+                        'https://tiles.nakarte.me/topomapper/{z}/{x}/{y}',
                         {
                             code: 'T',
                             isOverlay: false,
-                            scaleDependent: false,
+                            scaleDependent: true,
                             maxNativeZoom: 13,
                             noCors: false,
                             print: true,
